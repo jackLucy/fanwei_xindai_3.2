@@ -38,7 +38,7 @@ return array(
 'HELP_CATE_LIMIT'=>'4',
 'HELP_ITEM_LIMIT'=>'4',
 'SHOP_FOOTER'=>'<div style=\"text-align:center;\">
-	联系我们：info@fanwe.com &nbsp; 福州方维信息科技有限公司
+	联系我们：info@vonwey.com &nbsp;
 </div>
 <div style=\"text-align:center;\">
 	&copy; 2013 p2p信贷 All rights reserved
@@ -48,7 +48,7 @@ return array(
 'USER_MESSAGE_AUTO_EFFECT'=>'1',
 'MAIL_SEND_PAYMENT'=>'1',
 'SMS_SEND_PAYMENT'=>'0',
-'REPLY_ADDRESS'=>'info@fanwe.com',
+'REPLY_ADDRESS'=>'info@vonwey.com',
 'MAIL_ON'=>'0',
 'SMS_ON'=>'1',
 'BATCH_PAGE_SIZE'=>'500',

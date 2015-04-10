@@ -1,12 +1,12 @@
 <?php
 // +----------------------------------------------------------------------
-// | Fanwe 方维p2p借贷系统
+// | p2p借贷系统
 // +----------------------------------------------------------------------
 // | Copyright (c) 2010 http://www.fanwe.com All rights reserved.
 // +----------------------------------------------------------------------
 
 $lang = array(
-	'name'	=>	'方维贷款内部数据分享接口',
+	'name'	=>	'贷款内部数据分享接口',
 	'show_name'	=>	'站内分享',
 );
 $config = array(
@@ -29,7 +29,7 @@ if (isset($read_modules) && $read_modules == true)
     return $module;
 }
 
-// 方维oso内部数据分享接口
+// oso内部数据分享接口
 require_once(APP_ROOT_PATH.'system/libs/fetch_topic.php');
 class Fanwe_fetch_topic implements fetch_topic {
 	

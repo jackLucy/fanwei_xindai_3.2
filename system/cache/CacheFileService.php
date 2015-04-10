@@ -1,10 +1,10 @@
 <?php
 // +----------------------------------------------------------------------
-// | Fanwe 方维p2p借贷系统
+// | p2p借贷系统
 // +----------------------------------------------------------------------
-// | Copyright (c) 2011 http://www.fanwe.com All rights reserved.
+// | Copyright (c) 2013 http://www.vonwey.com All rights reserved.
 // +----------------------------------------------------------------------
-// | Author: 云淡风轻(88522820@qq.com)
+// | Author: Vonwey(vonwey@163.com)
 // +----------------------------------------------------------------------
 
 class CacheFileService extends CacheService

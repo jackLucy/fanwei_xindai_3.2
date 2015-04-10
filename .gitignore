@@ -2,3 +2,9 @@
 /public/sys_config.php
 /public/runtime
 /admin/Conf/config.php
+/wap/log
+/alipay_web/alipaylog
+/install/Runtime
+/public/comment
+/public/db_backup
+/public/logger
