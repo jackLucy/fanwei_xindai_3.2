@@ -706,12 +706,13 @@ margin-left: 68px;
 .mp_name{width:200px;text-indent:20px;}
 .mp_time{width:508px;text-align:center;}
 .qianggou_title{background:url(../images/qianggou.jpg) no-repeat;height:40px;}
+.login_block{	position: absolute;	z-index: 2;	right: 0;	float: right;	overflow: hidden;	height: 333px;	top: -333px;}
 .main_adv_box{height:380px;overflow:hidden;position:relative;width:100%;z-index:1;}
 .main_adv_box span{display:none;height:100%;position:absolute;width:100%;}
 .main_adv_box span a{display:block;height:100%;width:100%;}
 .main_adv_box .main_adv_img span img{height:380px;width:100%;}
-.main_adv_ctl ul{bottom:5px;display:block;left:50%;position:absolute;width:160px;}
-.main_adv_ctl ul li{background-color:#ededed;cursor:pointer;float:left;display:block;height:14px;line-height:14px;margin:5px;opacity:0.9;text-align:center;text-indent:-999em;width:14px;-moz-border-radius:10px;-khtml-border-radius:10px;-webkit-border-radius:10px;border-radius:10px; behavior:url(../js/PIE.htc);}
+.main_adv_ctl ul{bottom:35px;display:block;left:45%;position:absolute;width:200px;}
+.main_adv_ctl ul li{background-color:#ededed;cursor:pointer;float:left;display:block;height:9px;line-height:14px;margin:5px;opacity:0.9;text-align:center;text-indent:-999em;width:45px;-moz-border-radius:10px;-khtml-border-radius:10px;-webkit-border-radius:10px;border-radius:10px; behavior:url(../js/PIE.htc);}
 .main_adv_ctl ul li.act{background-color:#0697da;}
 .touy{background:url(../images/touy.gif) center no-repeat;display:block;height:9px;*height:12px;margin:0 auto 16px;*margin-top:-5px;_margin-top:-6px;overflow:hidden;width:100%;}
 .input_baomin{background:url(../images/bmbtn.jpg) no-repeat;width:124px;height:31px;border:0px;cursor:pointer;}
@@ -1356,3 +1357,15 @@ color: #00bef0;
 .uc-table table td{ line-height:20px; padding:8px; text-align:center; border-right:#ccc solid 1px; border-bottom:#e2e2e2 solid 1px; }
 .uc-table tr.alt{ background:#f2f2f2; }
 
+/* 首页立即登录*/
+.relative { position:relative;}
+.login_block{	position: absolute;	z-index: 2;	right: 0; top: 80px;	float: right;	overflow: hidden;	height: 230px;	color:#FFF;}
+.login_block a{ color:#FFF;}
+.login_block a:hover{ color:#FFF;}
+.login_block .freelogin{	width: 300px;	height: 225px;	margin-top:35px; }
+.login_block .freebj{	position:absolute;	right: 0;	position: absolute;	width:300px;	height:230px;	background: #000;	z-index: 2;	filter:alpha(opacity=70);  	-moz-opacity:0.7;  	-khtml-opacity: 0.7;  	opacity: 0.7;  	-moz-border-radius: 5px;	-webkit-border-radius: 5px;	border-radius: 5px;	*zoom:1;}
+.login_block .freelogin .freereg{ font-size:20px; margin:auto; width:240px; text-align:center; line-height:30px;}
+.login_block .freelogin .newu { line-height:40px; font-weight:bold;}
+.login_block .freelogin .tenreg{ cursor:auto; padding:5px 58px; background-color:#22c0e7; border-radius:4px; margin:15px 0px;}
+.login_block .freelogin .fast_login{ font-size:16px; text-align:right;}
+.login_block .freelogin .fast_login a{ text-decoration:underline;}

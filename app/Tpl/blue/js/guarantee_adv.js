@@ -18,7 +18,7 @@ $(document).ready(function(){
 		for(i=1;i<=total;i++){
 			$("#main_adv_ctl li[rel='"+i+"']").show();
 		}
-		$("#main_adv_ctl ul").css({"width":35*total+"px"});
+		$("#main_adv_ctl ul").css({"width":55*total+"px"});
 	}
 	else {
 		if(total==0)

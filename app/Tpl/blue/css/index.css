@@ -12,7 +12,7 @@
 body{background:#fff;}
 .feature{ margin-bottom:30px; overflow:hidden; width:100%; }
 .feature a{ display:block; float:left; font-family:"Microsoft YaHei"; overflow:hidden; text-align:center; text-decoration:none; padding:0 50px; width:175px; }
-.feature a i{ background:url(../images/index_icon1.png) no-repeat; display:block; height:87px; margin:0 auto 22px; width:87px; }
+.feature a i{ background:url(../images/index_icon1.png) no-repeat; display:block; height:120px; margin:0 auto 22px; width:120px; }
 .feature .fea2 i{ background:url(../images/index_icon2.png) no-repeat; }
 .feature .fea3 i{ background:url(../images/index_icon3.png) no-repeat; }
 .feature .fea4 i{ background:url(../images/index_icon4.png) no-repeat; }
