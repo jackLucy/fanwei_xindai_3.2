@@ -10,6 +10,7 @@
 
 }
 body{background:#fff;}
+
 .feature{ margin-bottom:30px; overflow:hidden; width:100%; }
 .feature a{ display:block; float:left; font-family:"Microsoft YaHei"; overflow:hidden; text-align:center; text-decoration:none; padding:0 50px; width:175px; }
 .feature a i{ background:url(../images/index_icon1.png) no-repeat; display:block; height:120px; margin:0 auto 22px; width:120px; }
@@ -19,19 +20,20 @@ body{background:#fff;}
 .feature a h3{ color:#000; font-size:20px; margin-bottom:10px; }
 .feature a span{ color:#aaa; }
 
-
-.total{ line-height:normal; border:1px solid #e3e3e3; background-color:#f9f9f9; margin-bottom:20px; overflow:hidden; padding:24px 0; width:1098px; }
-.total .t{line-height:normal; float:left; text-align:center; width:366px;}
+.index_money{ background:#f1f4f5; color:#767777;}
+.total{ line-height:normal; margin-bottom:20px; overflow:hidden; padding:10px 0; width:1100px; font-size:16px;}
+.total .t{line-height:normal; float:left; width:310px;}
 .total p{line-height:normal; color:#000; margin-bottom:24px; }
-
-
-.total .money{ color:#00bef0; font-size:30px; }
+.total .money{ color:#4d4d4d; font-size:18px; font-weight:bold;}
 .total .money span{ font-family:vaniregular; font-size:36px; }
-.total em{ color:#939393; }
-.total .note{ background:url(../images/index_icon5.png) 0 0 no-repeat; clear:both; margin:0px 0 0 80px; overflow:hidden; padding-left:16px; }
+.total em{ color:#4d4d4d; }
+.total .note{ background:url(../images/index_icon5.png) 0 2px no-repeat; padding-left:26px; width:340px;}
+.total .tal3{ width:360px;}
+.total .tal3{ text-align:right;}
 
-.index_left{ background-color:#fff; border:1px solid #e3e3e3; width:760px; }
-.index_right{ width:318px;}
+.index_left{ background-color:#fff; border:1px solid #e3e3e3; width:1098px; }
+.index_fr{ width:350px;}
+.index_lc{ width:320px;}
 .r-block{ background-color:#fff; }
 .r-block .gray_title{padding-right:6px}
 .r-block li{ height:26px; line-height:26px}
@@ -57,22 +59,16 @@ color: #3c3c3c;}
 .i_deal_list table td{ color:#666; padding:20px 0; text-align:center; }
 .i_deal_list .more{ color:#a9a9a9; display:block; font-size:16px; font-weight:normal; margin-top:20px; }
 
-.notice-list{
-	border:1px solid #e3e3e3;
-	border-top:none;
-	padding: 5px 12px;
-}
-.notice-list ul{
-list-style: url(../images/li1.gif) inside;
-
-}
-
+.notice-list{ padding: 5px 0px; }
+.notice-list a{ color:#333333;}
+.index_notice .nav_title{ padding-left:0px;}
 .notice-list li{ height:26px; line-height:26px;}
+.notice_more{ position:absolute; right:0px; top:15px;}
 
 #case { padding:0; }
 #case li { color:#666; font-family:"Microsoft YaHei"; padding:10px; }
 #case li span { display:inline-block; width:74px; }
-.borrow_out,.borrow_in{z-index:10;display:block; width:110px;height:48px; left:30px; top:87px; overflow:hidden; background:#fff;
+.borrow_out,.borrow_in{z-index:10;display:block; width:125px;height:48px; left:33px; top:153px; overflow:hidden; background:#fff;
 filter:alpha(opacity=0);opacity:0.0}
 .borrow_in{left:180px}
 
@@ -103,10 +99,9 @@ filter:alpha(opacity=0);opacity:0.0}
 	position:relative;
 }
 #loadtop #rightTitls {
-	float: right;
+	top:10px;
 	right:0;
 	position:absolute;
-	text-align: right;
 	width: 80px;
 }
 #loadtop #rightTitls li {
@@ -131,11 +126,12 @@ filter:alpha(opacity=0);opacity:0.0}
 }
 
 #loadtop #rightTitls li.current a{
-	background:#02a0ca;
-	color:#fff;
 	font-weight:bolder;
 }
-#loadtop #J_conbox li span{ display:block; float:left;}
-#loadtop #J_conbox li span.nums{width:30px}
-#loadtop #J_conbox li span.uname{width:120px}
-#loadtop #J_conbox li span.money{width:140px; text-align:right;}
+#loadtop #J_conbox li{ height:20px; line-height:20px;}
+#loadtop #J_conbox li.libg{ background:url(../images/li_bg.png) 12px 13px no-repeat;}
+#loadtop #J_conbox li span{ display:block; float:left; color:#333333;}
+#loadtop #J_conbox li span.nums{width:30px; margin-right:70px;}
+#loadtop #J_conbox li.libg span.nums{ color:#FFF; font-size:10px;}
+#loadtop #J_conbox li span.uname{width:60px}
+#loadtop #J_conbox li span.money{width:150px; text-align:right;}

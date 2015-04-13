@@ -1,4 +1,5 @@
 	</div>
+                
 	<div class="blank20"></div>
 	<div id="ftw">
         <div id="ft">
@@ -7,7 +8,7 @@
 	            <ul class="cf">
 	            	{foreach from=$deal_help item=help_cate name="help_cate"}
 					{if $smarty.foreach.help_cate.iteration <= app_conf('HELP_CATE_LIMIT')}
-					<li class="col hp{$smarty.foreach.help_cate.iteration}{if $smarty.foreach.help_cate.last} end{/if}">
+					<li class="col {if ($smarty.foreach.help_cate.iteration - 1)%3 == 0 && ($smarty.foreach.help_cate.iteration - 1)} end{/if} hp{$smarty.foreach.help_cate.iteration}{if $smarty.foreach.help_cate.last} end{/if}">
 	                    <h3>{$help_cate.title}</h3>
 	                    <ul class="sub-list">
 							{foreach from=$help_cate.help_list item=help_item name="help_item"}
@@ -19,24 +20,14 @@
 	                </li> 
 					{/if}
 					{/foreach}
+                    <li class="ewm_wx"><img src="{$TMPL}/images/ewm_wx.png" /></li>
 	            </ul>
 				<div class="blank"></div>
 			</div>
 			<div class="footer_line"></div>
 			{/if}
 			<div class="wrap">
-				{if $f_link_data}
-				<div class="flink">
-				{foreach from=$f_link_data item=link_group}			
-					<span style="color:#ccc; float:left; padding:5px 10px 5px 0px;">{$link_group.name}</span>
-					{foreach from=$link_group.links item=link}
-						<a href="http://{$link.url}" target="_blank" title="{if $link.description}{$link.description}{else}{$link.name}{/if}">{if $link.img neq ''}<img src='{$link.img}' alt="{if $link.description}{$link.description}{else}{$link.name}{/if}" />{else}{$link.name}{/if}</a>
-					{/foreach}
-					<div class="blank1"></div>
-				{/foreach}
-				</div>		
-				<div class="blank"></div>
-				{/if}
+				
 	            <div class=copyright>
 	            	{if $system_article}
 					<div class="tc clearfix">
@@ -47,10 +38,9 @@
 					<div class="blank"></div>
 					{/if}
 	            	{if app_conf("SHOP_TEL") neq ''}
-					{$LANG.TEL}：{function name="app_conf" value="SHOP_TEL"} {function name="app_conf" value="ONLINE_TIME"}  
+					客服热线：{function name="app_conf" value="SHOP_TEL"} {function name="app_conf" value="ONLINE_TIME"}  
 					&nbsp;&nbsp;
 					{/if}				
-					{function name="app_conf" value="ICP_LICENSE"}&nbsp;&nbsp;
 					{function name="app_conf" value="COUNT_CODE"}
 					<div class="blank1"></div>	
 					{function name="app_conf" value="SHOP_FOOTER"} 
