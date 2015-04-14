@@ -65,7 +65,8 @@ color: #3c3c3c;}
 .index_notice .nav_title{ padding-left:0px;}
 .notice-list li{ height:26px; line-height:26px; font-size:12px;}
 .notice_more{ position:absolute; right:0px; top:15px;}
-.notice-list .date{ float:right;}
+.notice-list .n_title{ float:left;}
+.notice-list .n_date{ float:right;}
 
 #case { padding:0; }
 #case li { color:#666; font-family:"Microsoft YaHei"; padding:10px; }

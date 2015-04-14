@@ -301,10 +301,10 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
         <ul>
             {foreach from=$notice_list item="notice"}
             <li>
-                <span>
+                <span class="n_title">
                 <a href="{$notice.url}" title="{$notice.title}" target="_blank">{function name="msubstr" v=$notice.title s=0 e=18}</a>
                 </span>
-                <span class="date">{function name="to_date" v="$notice.update_time" f="Y-m-d"}</span>
+                <span class="n_date">{function name="to_date" v="$notice.update_time" f="Y-m-d"}</span>
             </li>
             {/foreach}
         </ul>

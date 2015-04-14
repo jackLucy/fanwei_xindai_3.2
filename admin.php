@@ -7,10 +7,6 @@
 // | Author: Vonwey(vonwey@163.com)
 // +----------------------------------------------------------------------
 
-if(!defined("ADMIN_ROOT"))
-{
-	die("Invalid access");
-}
 require './system/common.php';
 
 define('BASE_PATH','./');
