@@ -3,7 +3,7 @@
 	<div class="blank20"></div>
 	<div id="ftw">
         <div id="ft">
-        	{if $MODULE_NAME neq 'user'}
+        	{if $MODULE_NAME neq 'user' && !stristr($MODULE_NAME,'uc_')}
         	<div class="wrap">
 	            <ul class="cf">
 	            	{foreach from=$deal_help item=help_cate name="help_cate"}

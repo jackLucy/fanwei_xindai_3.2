@@ -442,7 +442,7 @@ return array(
 					array("name"=>"类型回收站","module"=>"DealLoanType","action"=>"trash"),
 					array("name"=>"贷款城市设置","module"=>"City","action"=>"index"),
 					array("name"=>"城市回收站","module"=>"City","action"=>"trash"),
-					array("name"=>"担保机构设置","module"=>"DealAgency","action"=>"index"),
+//					array("name"=>"担保机构设置","module"=>"DealAgency","action"=>"index"),
 				),
 			),
 			
@@ -457,14 +457,14 @@ return array(
 					),
 			),
 			
-			"mobile"	=>	array(
-				"name"	=>	"移动平台设置", 
-				"key"	=>	"mobile", 
-				"nodes"	=>	array( 
-					array("name"=>"手机端配置","module"=>"Conf","action"=>"mobile"),
-					array("name"=>"手机端广告列表","module"=>"MAdv","action"=>"index"),
-				),
-			),		
+//			"mobile"	=>	array(
+//				"name"	=>	"移动平台设置", 
+//				"key"	=>	"mobile", 
+//				"nodes"	=>	array( 
+//					array("name"=>"手机端配置","module"=>"Conf","action"=>"mobile"),
+//					array("name"=>"手机端广告列表","module"=>"MAdv","action"=>"index"),
+//				),
+//			),		
 			"admin"	=>	array(
 				"name"	=>	"系统管理员", 
 				"key"	=>	"admin", 
@@ -474,14 +474,14 @@ return array(
 					array("name"=>"管理员管理","module"=>"Admin","action"=>"index"),
 				),
 			),
-			"datebase"	=>	array(
-				"name"	=>	"数据库", 
-				"key"	=>	"datebase", 
-				"nodes"	=>	array( 
-					array("name"=>"数据库备份","module"=>"Database","action"=>"index"),
-					array("name"=>"SQL操作","module"=>"Database","action"=>"sql"),
-				),
-			),
+//			"datebase"	=>	array(
+//				"name"	=>	"数据库", 
+//				"key"	=>	"datebase", 
+//				"nodes"	=>	array( 
+//					array("name"=>"数据库备份","module"=>"Database","action"=>"index"),
+//					array("name"=>"SQL操作","module"=>"Database","action"=>"sql"),
+//				),
+//			),
 			
 		),
 	),

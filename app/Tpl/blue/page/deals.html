@@ -9,7 +9,7 @@
 		            <div class="f_l f_dgray b">筛选条件</div>
 		        </div>
 				<div class="propAttrs clearfix pr {if $scity_id neq 0 || $deal_status neq 0 || $level neq 0 || $interest neq 0 || $lefttime neq 0}v{/if}" id="search_condition" {if $scity_id eq 0 && $deal_status eq 0 && $level eq 0 && $interest eq 0 && $lefttime eq 0}style="height:130px"{/if}>
-					<a href="javascript:void(0);" class="j_more  ps" style="bottom:10px;right:10px;z-index:10;color:#01bcef">更多筛选</a>
+					<a href="javascript:void(0);" class="j_more  ps" style="bottom:10px;right:10px;z-index:10;color:#01bcef">更多筛选<img src="{$TMPL}/images/more.png" /></a>
 		            <form action="{url x="index" r="deals" p="cid=$cid"}" method="post" id="searchByConditionForm">
 		                
 						{if $cate_list_url}

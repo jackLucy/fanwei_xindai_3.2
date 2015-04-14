@@ -2,19 +2,21 @@
 .u_box { width:848px; overflow:hidden; }
 .u_img {margin-right: 10px;}
 .u_img img { width:117px; height:117px; border:1px solid #e3e3e3; padding:1px; overflow:hidden }
-.u_infobox {color: #2c2c2c; width:250px; *width:240px; }
+.u_infobox {color: #2c2c2c; width:230px; *width:240px; }
 .u_infobox .u_l1 {display: block;line-height: 24px;; clear:both;}
 .u_infobox .user_name{ font-weight:bolder;}
 .u_infobox .user_name .name{ color:#29A9DF; font-weight:bolder;}
 .u_infobox .u_l1 .u_money {color: #c90000;margin-right: 2px;}
 .uc_user_info .desc{ width:715px; *width:710px; }
-.uc_user_info .recharge{ text-align:right; }
-.uc_user_info .recharge a{ color:#fff; display:inline-block; font-size:16px; height:30px; line-height:30px; margin-left:10px; padding:0 24px; text-decoration:none; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
+.uc_user_info .recharge{ }
+.uc_user_info .recharge a{ color:#fff; display:inline-block; font-size:16px; height:30px; line-height:30px; padding:0 24px; text-decoration:none; -moz-border-radius:15px; -khtml-border-radius:15px; -webkit-border-radius:15px; border-radius:15px; }
 .uc_user_info .recharge a.rcg{ background-color:#f5634d; }
 .uc_user_info .recharge a.wdl{ background-color:#00bef0; }
 
+.pl50{ padding-left:50px;}
+
 .u_total_box, .u_frozen_box {font-size: 14px; }
-.u_total_box{padding-right:15px;}
+.u_total_box{padding-right:15px; border-left:1px solid #e3e3e3;}
 .u_total_box .u_money, .u_frozen_box .u_money {display: block;clear: both;font-size: 35px;font-family: Vani,Arial;color: #3f9d1f;margin-top: 10px; white-space:nowrap;}
 
 .uinfo_settting {
@@ -39,7 +41,7 @@
 .u_z , .u_t , .u_j {
 	/*width: 155px;*/
 	padding-left:55px;
-	height:64px;
+	height:74px;
 	display:inline;
 	background: url(../images/u_z.gif) no-repeat left top;
 	float:left;
@@ -47,19 +49,19 @@
 }
 
 .u_z {
-	background: url(../images/u_z.gif) no-repeat left top;
+	background: url(../images/u_z.png) no-repeat left top;
 }
 
 .u_t {
-background: url(../images/u_t.gif) no-repeat left top;
+background: url(../images/u_t.png) no-repeat left top;
 }
 .u_j {
-background: url(../images/u_j.gif) no-repeat left top;
+background: url(../images/u_j.png) no-repeat left top;
 }
 
 .u_z span, .u_t span, .u_j span {
 	font-size: 20px;
-	margin-left: 14px;
+	margin-left: 24px;
 	margin-top: 8px;
 	display: block;
 	}
@@ -73,7 +75,7 @@ color: #3f9d1f;
 color: #f5634d;
 }
 .u_z div, .u_t div, .u_j div {
-	margin-left: 14px;
+	margin-left: 24px;
 	margin-top: 8px;
 	color: #303030;
 }

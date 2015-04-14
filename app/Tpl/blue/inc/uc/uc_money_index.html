@@ -113,10 +113,10 @@ jQuery(function(){
 			</div>
 			<div class="blank0"></div>
 
-			<div class="sub_nav">
-				<span {if $t eq ''}class="act"{/if}><a href="{url x="index" r="uc_money#index"}">资金日志</a></span>
-				<span {if $t eq 'lock_money'}class="act"{/if}><a href="{url x="index" r="uc_money#index" p="t=lock_money"}">冻结金额日志</a></span>
-				<span {if $t eq 'point'}class="act"{/if}><a href="{url x="index" r="uc_money#index" p="t=point"}">信用积分日志</a></span>
+			<div class="list_title bt1">
+				<div {if $t eq ''}class="cur"{/if}><a href="{url x="index" r="uc_money#index"}">资金日志</a></div>
+				<div {if $t eq 'lock_money'}class="act"{/if}><a href="{url x="index" r="uc_money#index" p="t=lock_money"}">冻结金额日志</a></div>
+				<div {if $t eq 'point'}class="act"{/if}><a href="{url x="index" r="uc_money#index" p="t=point"}">信用积分日志</a></div>
 			</div>
 		
 			<div class="nav">

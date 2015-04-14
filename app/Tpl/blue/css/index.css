@@ -31,8 +31,9 @@ body{background:#fff;}
 .total .tal3{ width:360px;}
 .total .tal3{ text-align:right;}
 
-.index_left{ background-color:#fff; border:1px solid #e3e3e3; width:1098px; }
+.index_left{ background-color:#fff; border:1px solid #e3e3e3; width:1098px; margin-bottom:40px;}
 .index_fr{ width:350px;}
+.index_fr .nav_title{ padding-top:10px;}
 .index_lc{ width:320px;}
 .r-block{ background-color:#fff; }
 .r-block .gray_title{padding-right:6px}
@@ -62,8 +63,9 @@ color: #3c3c3c;}
 .notice-list{ padding: 5px 0px; }
 .notice-list a{ color:#333333;}
 .index_notice .nav_title{ padding-left:0px;}
-.notice-list li{ height:26px; line-height:26px;}
+.notice-list li{ height:26px; line-height:26px; font-size:12px;}
 .notice_more{ position:absolute; right:0px; top:15px;}
+.notice-list .date{ float:right;}
 
 #case { padding:0; }
 #case li { color:#666; font-family:"Microsoft YaHei"; padding:10px; }
@@ -128,10 +130,11 @@ filter:alpha(opacity=0);opacity:0.0}
 #loadtop #rightTitls li.current a{
 	font-weight:bolder;
 }
-#loadtop #J_conbox li{ height:20px; line-height:20px;}
-#loadtop #J_conbox li.libg{ background:url(../images/li_bg.png) 12px 13px no-repeat;}
+#loadtop #J_conbox li{ height:31px; line-height:20px; font-size:12px; margin-left:10px;}
+#loadtop #J_conbox li.libg{ background:url(../images/li_bg.png) 12px 2px no-repeat;}
 #loadtop #J_conbox li span{ display:block; float:left; color:#333333;}
 #loadtop #J_conbox li span.nums{width:30px; margin-right:70px;}
 #loadtop #J_conbox li.libg span.nums{ color:#FFF; font-size:10px;}
 #loadtop #J_conbox li span.uname{width:60px}
-#loadtop #J_conbox li span.money{width:150px; text-align:right;}
+#loadtop #J_conbox li span.money{width:130px; text-align:right;}
+

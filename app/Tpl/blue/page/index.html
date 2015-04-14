@@ -53,8 +53,8 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
                     {foreach from=$deal_list item="deal" key=key name="deal"}
                     <tr class="item {if $key mod 2 eq 1}item_1{/if} clearfix" {if $smarty.foreach.deal.last}style="border-bottom:0"{/if}>
                         <td  class="tl" style="text-align:left;">
-                            &nbsp;&nbsp;<img src="{$deal.cate_info.icon}"  height="18" class="ico" title="{$deal.cate_info.name}" />
-                            <a href="{$deal.url}">{$deal.color_name}</a>
+                            &nbsp;&nbsp;<img src="{$deal.cate_info.icon}"  height="25" class="ico" title="{$deal.cate_info.name}" />
+                            <a href="{$deal.url}" target="_blank">{$deal.color_name}</a>
                         </td>
                         <td>
                             <span>{$deal.borrow_amount_format}</span>
@@ -122,7 +122,7 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
                             </script>
                         </td>
                         <td style="width:95px;">
-                            <a href="{$deal.url}">
+                            <a href="{$deal.url}" target="_blank">
                                 {if $deal.is_delete eq 2}
                                     <span class="f_white">待发布</span>
                                 {elseif $deal.is_wait eq 1}
@@ -163,7 +163,7 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
                     {foreach from=$transfer_list item="transfer" key=key name="transfer"}
                     <tr class="item {if $key mod 2 eq 1}item_1{/if} tc">
                         <td style="text-align:left">
-                            &nbsp;&nbsp;<img src="{$transfer.cate_info.icon}" height="18" class="ico" title="{$deal.cate_info.name}" /> 
+                            &nbsp;&nbsp;<img src="{$transfer.cate_info.icon}" height="25" class="ico" title="{$deal.cate_info.name}" /> 
                             <a href="{$transfer.url}" target="_blank">
                                {$transfer.name}
                             </a>
@@ -231,13 +231,13 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
     
     <div id="J_conbox" >
         <ul class="clearfix" rel="1">
-        	<li class="clearfix pl10 pt10 pb10">
+        	<li class="clearfix pl10 pt10 pb5">
                 <span class="nums tc">排名</span>
                 <span class="uname">用户名</span>
                 <span class="money">投资金额</span>
             </li>
             {foreach from="$month_load_top_list" item="load" name="loads"}
-            <li class="clearfix pl10 pt10 pb10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
+            <li class="clearfix pl10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
                 <span class="nums tc">{$smarty.foreach.loads.iteration}</span>
                 <span class="uname">{function name="utf_substr" v="$load.user_name"}</span>
                 <span class="money">{function name="format_price" v=$load.total_money f=2}</span>
@@ -245,13 +245,13 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
             {/foreach}
         </ul>
         <ul class="clearfix hide" rel="2">
-        	<li class="clearfix pl10 pt10 pb10">
+        	<li class="clearfix pl10 pt10 pb5">
                 <span class="nums tc">排名</span>
                 <span class="uname">用户名</span>
                 <span class="money">投资金额</span>
             </li>
             {foreach from="$week_load_top_list" item="load" name="loads"}
-            <li class="clearfix pl10 pt10 pb10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
+            <li class="clearfix pl10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
                 <span class="nums tc">{$smarty.foreach.loads.iteration}</span>
                 <span class="uname">{function name="utf_substr" v="$load.user_name"}</span>
                 <span class="money">{function name="format_price" v=$load.total_money f=2}</span>
@@ -259,13 +259,13 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
             {/foreach}
         </ul>
         <ul class="clearfix hide" rel="3">
-        	<li class="clearfix pl10 pt10 pb10">
+        	<li class="clearfix pl10 pt10 pb5">
                 <span class="nums tc">排名</span>
                 <span class="uname">用户名</span>
                 <span class="money">投资金额</span>
             </li>
             {foreach from="$day_load_top_list" item="load" name="loads"}
-            <li class="clearfix pl10 pt10 pb10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
+            <li class="clearfix pl10 {if $smarty.foreach.loads.iteration < 4}libg{/if}">
                 <span class="nums tc">{$smarty.foreach.loads.iteration}</span>
                 <span class="uname">{function name="utf_substr" v="$load.user_name"}</span>
                 <span class="money">{function name="format_price" v=$load.total_money f=2}</span>
@@ -302,8 +302,9 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
             {foreach from=$notice_list item="notice"}
             <li>
                 <span>
-                <a href="{$notice.url}" title="{$notice.title}">{function name="msubstr" v=$notice.title s=0 e=18}</a>
+                <a href="{$notice.url}" title="{$notice.title}" target="_blank">{function name="msubstr" v=$notice.title s=0 e=18}</a>
                 </span>
+                <span class="date">{function name="to_date" v="$notice.update_time" f="Y-m-d"}</span>
             </li>
             {/foreach}
         </ul>
@@ -312,8 +313,8 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
     
     <div class="index_fr r-block f_r relative">
     <img src="{$TMPL}/images/dosomthing.jpg" />
-    <a class="borrow_out ps" href="{url x="index" r="deals"}">我要借出</a>
-    <a class="borrow_in ps" href="{url x="index" r="borrow"}">我要借款</a>
+    <a class="borrow_out ps" href="{url x="index" r="deals"}" target="_blank">我要借出</a>
+    <a class="borrow_in ps" href="{url x="index" r="borrow"}" target="_blank">我要借款</a>
     </div>
 </div>
 

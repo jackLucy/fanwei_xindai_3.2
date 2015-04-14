@@ -117,6 +117,11 @@ $this->_var['cpmjs'][] = $this->_var['TMPL_REAL']."/js/pm.js";
 		
 		</table>
 		</form>
+        
+        {if !$pages}
+        <div class="no_msg"><img src="{$TMPL}/images/image_err.gif" /><span>暂无内容</span></div>
+        {/if}
+        
 		{if $mtype eq 'private'}
 			<div class="pt10" style="float:right">
 			{$LANG.SELECT_ALL}<input type="checkbox" name="checkall" /> 

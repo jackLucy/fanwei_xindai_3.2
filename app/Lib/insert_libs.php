@@ -91,6 +91,13 @@ function insert_load_user_tip_index()
 	return $GLOBALS['tmpl']->fetch("inc/insert/load_user_tip_index.html");
 }
 
+//动态加载登陆框
+function insert_load_login_box()
+{
+	if(intval($GLOBALS['user_info']['id']) < 1){
+		return $GLOBALS['tmpl']->fetch("inc/insert/load_login_box.html");
+	}
+}
 
 //动态加载商品分类页的产品列表
 function insert_load_filter_goods_list()

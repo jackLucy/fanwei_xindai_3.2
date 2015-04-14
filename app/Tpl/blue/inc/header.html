@@ -74,9 +74,9 @@ $(function() {
 		<div class="wrap clearfix" style="overflow:visible;">
 			<div class="f_l">
 				<div class="sharemk">
-                	<a  href="/" target="_blank" title="微信号"; class="share weixin"></a>
-					<a  href="/" target="_blank" title="新浪微博"; class="share xinlan"></a>
-					<a  href="/" target="_blank" title="腾讯微博"; class="share tenxun"></a>
+					<li><a  href="/" target="_blank" title="腾讯微博"; class="share tenxun"></a></li>
+					<li><a  href="/" target="_blank" title="新浪微博"; class="share weibo"></a></li>
+                    <li><a  href="/" target="_blank" title="微信号"; class="share weixin"></a></li>
 				</div>
 			</div>
 			<div class="f_r lh30">
@@ -125,21 +125,7 @@ $(function() {
 	<!--{/if}-->
 </div>
 <!--{if $MODULE_NAME == 'index'}-->
-<!--{if !$user_info}-->
-<div class="wrap relative" >
-	<div class="login_block ">
-        <div class="freelogin ">
-            <div class="freereg ">
-                <div>安全、稳健、高收益</div>
-                <div class="newu">新注册用户更享好礼</div>
-                <a href="{url x="index" u="user#register" }"><div class="tenreg">10秒免费注册</div></a>
-                <div class="fast_login ">已有账号？<a href="{url x="index" u="user#register" }">立即登录</a></div>
-            </div>
-        </div>
-        <div class="freebj"></div>
-	</div>
-</div>
-<!--{/if}-->
+{insert name="load_login_box"}
 <div id="main_adv_box" class="main_adv_box f_l">
 	<div id="main_adv_img" class="main_adv_img">
 		<span rel="1"><adv adv_id="首页广告位1" /></span>

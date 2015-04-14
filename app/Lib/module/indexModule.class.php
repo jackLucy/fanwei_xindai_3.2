@@ -50,7 +50,7 @@ class indexModule extends SiteBaseModule
 			$GLOBALS['tmpl']->assign('transfer_list',$transfer_list['list']);
 						
 			//输出公告
-			$notice_list = get_notice(0);
+			$notice_list = get_notice(7);
 			$GLOBALS['tmpl']->assign("notice_list",$notice_list);	
 			
 			//输出公司动态
@@ -66,13 +66,13 @@ class indexModule extends SiteBaseModule
 			//投资排行
 			//天
 			$now_time = to_timespan(to_date(TIME_UTC,"Y-m-d"),"Y-m-d");
-			$day_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$now_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 10");
+			$day_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$now_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 5");
 			//周
 			$week_time =  to_timespan(to_date(TIME_UTC - to_date(TIME_UTC,"w") * 24*3600 ,"Y-m-d"),"Y-m-d") ;
-			$week_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$week_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 10 ");
+			$week_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$week_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 5 ");
 			//月
 			$month_time = to_timespan(to_date(TIME_UTC,"Y-m")."-01","Y-m-d");
-			$month_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$month_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 10");
+			$month_load_top_list =  $GLOBALS['db']->getAll("SELECT * FROM (SELECT user_name,sum(money) as total_money FROM ".DB_PREFIX."deal_load where create_time >= ".$month_time." group by user_id ORDER BY total_money DESC) as tmp LIMIT 5");
 			$GLOBALS['tmpl']->assign("day_load_top_list",$day_load_top_list);	
 			$GLOBALS['tmpl']->assign("week_load_top_list",$week_load_top_list);	
 			$GLOBALS['tmpl']->assign("month_load_top_list",$month_load_top_list);	
