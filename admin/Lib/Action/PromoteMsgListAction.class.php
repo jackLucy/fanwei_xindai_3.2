@@ -72,6 +72,7 @@ class PromoteMsgListAction extends CommonAction{
 	{
 		$id = intval($_REQUEST['id']);
 		$msg_item = M("PromoteMsgList")->getById($id);
+		
 		if($msg_item)
 		{
 			if($msg_item['send_type']==0)

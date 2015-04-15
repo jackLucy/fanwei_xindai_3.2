@@ -39,7 +39,7 @@ class sms_sender
 			}
 			else
 			{
-				$result = $this->sms->sendSms($mobiles,$content,$sendTime);
+				$result = $this->sms->sendSMS($mobiles,$content);
 			}
 		}
 		else

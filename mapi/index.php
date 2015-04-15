@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | p2p系统 mapi 插件
 // +----------------------------------------------------------------------
-// | Copyright (c) 2010 http://www.fanwe.com All rights reserved.
+// | Copyright (c) 2010 http://www.vonwey.com All rights reserved.
 // +----------------------------------------------------------------------
 require '../system/common.php';
 require '../app/Lib/common.php';

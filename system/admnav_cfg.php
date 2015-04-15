@@ -442,7 +442,7 @@ return array(
 					array("name"=>"类型回收站","module"=>"DealLoanType","action"=>"trash"),
 					array("name"=>"贷款城市设置","module"=>"City","action"=>"index"),
 					array("name"=>"城市回收站","module"=>"City","action"=>"trash"),
-//					array("name"=>"担保机构设置","module"=>"DealAgency","action"=>"index"),
+					array("name"=>"担保机构设置","module"=>"DealAgency","action"=>"index"),
 				),
 			),
 			

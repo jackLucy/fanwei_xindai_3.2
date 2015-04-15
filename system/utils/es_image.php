@@ -252,7 +252,7 @@ class es_image
      * @return string
      +----------------------------------------------------------
      */
-    static function buildImageVerify($length=4,$mode=1,$type='gif',$width=48,$height=22,$verifyName='verify')
+    static function buildImageVerify($length=4,$mode=1,$type='gif',$width=48,$height=22,$verifyName='verify',$fontface='vani-webfont.ttf')
     {
 		require_once APP_ROOT_PATH."system/utils/es_string.php";
         $randval = es_string::rand_string($length,$mode);
@@ -284,12 +284,17 @@ class es_image
 			$fontcolor=imagecolorallocate($im,mt_rand(0,255),mt_rand(0,255),mt_rand(0,255));
 			imagesetpixel($im,mt_rand(0,$width),mt_rand(0,$height),$pointColor);
 		}
+		if(!is_file($fontface)) {
+			$fontface = APP_ROOT_PATH."app/Tpl/blue/images/fonts/".$fontface;
+		}
 		for($i=0;$i<$length;$i++) {
 			if($width>=89){
-				imagestring($im,5,$i*10+25,mt_rand(15,8),$randval{$i}, $stringColor);
+				//imagestring($im,5,$i*10+25,mt_rand(15,8),$randval{$i}, $stringColor);
+				imagettftext($im,mt_rand(18,30),mt_rand(-15,15),$i*18+5,mt_rand(20,30),$stringColor,$fontface,$randval{$i});
 			}
 			else
-				imagestring($im,5,$i*10+5,mt_rand(1,8),$randval{$i}, $stringColor);
+				//imagestring($im,5,$i*10+5,mt_rand(1,8),$randval{$i}, $stringColor);
+				imagettftext($im,mt_rand(14,20),mt_rand(-15,15),$i*10+5,mt_rand(1,8),$stringColor,$fontface,$randval{$i});
 		}
 //        @imagestring($im, 5, 5, 3, $randval, $stringColor);
         es_image::output($im,$type);
