@@ -24,7 +24,7 @@ body{background:#fff;}
 .total{ line-height:normal; margin-bottom:20px; overflow:hidden; padding:10px 0; width:1100px; font-size:16px;}
 .total .t{line-height:normal; float:left; width:310px;}
 .total p{line-height:normal; color:#000; margin-bottom:24px; }
-.total .money{ color:#4d4d4d; font-size:18px; font-weight:bold;}
+.total .money{ color:#4d4d4d; font-size:18px; font-weight:bold; padding:0px 5px;}
 .total .money span{ font-family:vaniregular; font-size:36px; }
 .total em{ color:#4d4d4d; }
 .total .note{ background:url(../images/index_icon5.png) 0 2px no-repeat; padding-left:26px; width:340px;}

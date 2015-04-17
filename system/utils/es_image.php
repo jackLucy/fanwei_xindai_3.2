@@ -293,8 +293,8 @@ class es_image
 				imagettftext($im,mt_rand(18,30),mt_rand(-15,15),$i*18+5,mt_rand(20,30),$stringColor,$fontface,$randval{$i});
 			}
 			else
-				//imagestring($im,5,$i*10+5,mt_rand(1,8),$randval{$i}, $stringColor);
-				imagettftext($im,mt_rand(14,20),mt_rand(-15,15),$i*10+5,mt_rand(1,8),$stringColor,$fontface,$randval{$i});
+				imagestring($im,5,$i*10+5,mt_rand(1,8),$randval{$i}, $stringColor);
+				//imagettftext($im,mt_rand(14,20),mt_rand(-15,15),$i*10+5,mt_rand(1,8),$stringColor,$fontface,$randval{$i});
 		}
 //        @imagestring($im, 5, 5, 3, $randval, $stringColor);
         es_image::output($im,$type);

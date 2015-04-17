@@ -48,7 +48,7 @@ class ESM_sms implements sms
 			$mobile_number=$mobile_number[0];
 		}
 
-		$content.='【友融金融】';
+		//$content.='【友融金融】';
  		$account = $this->sms['user_name'];
 		$password =$this->sms['password'];
 
@@ -68,14 +68,16 @@ class ESM_sms implements sms
 		);
 		$smsapi = "http://esm2.9wtd.com:9001/"; //短信网关
 		$user = $account ; //短信平台帐号
-		$productid = 'yrjr'; // 产品ID必须，如有需要联系客服
+		$productid = '625799'; // 产品ID必须，如有需要联系客服
 		$pass = md5($password); //短信平台密码
  		$phone = $mobile_number;//要发送短信的手机号码
 		$sendurl = $smsapi."sendXSms.do?username=".$user."&password=".$pass."&mobile=".$phone."&content=".urlencode($content)."&productid=".$productid;
 		$r =file_get_contents($sendurl) ;
+		$r=explode(',',$r);
+		$r = $r[0];
 
 		$result=array();
-		if($r=='0'){
+		if($r=='1'){
 			$result['status']=true;
 		}else{
 			$result['status']=false;
@@ -101,11 +103,10 @@ class ESM_sms implements sms
 		);
 		$smsapi = "http://esm2.9wtd.com:9001/"; //短信网关
 		$user = $account ; //短信平台帐号
-		$productid = 'yrjr'; // 产品ID必须，如有需要联系客服
+		$productid = '625799'; // 产品ID必须，如有需要联系客服
  		$sendurl = $smsapi."balance.do?username=".$user."&password=".$password."&productid=".$productid;;
 		$result =file_get_contents($sendurl) ;
-		$remain=explode(',',$result);
-		 return  '剩下'.$remain[1].'条短信';
+		 return  '剩下'.$result.'条短信';
 
 	}
 }

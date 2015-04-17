@@ -108,16 +108,16 @@ return array(
 									array("name"=>"会员回收站","module"=>"User","action"=>"trash"),
 							),
 					),
-					"company"	=>	array(
-							"name"	=>	"企业会员",
-							"key"	=>	"company",
-							"nodes"	=>	array(
-									array("name"=>"企业会员","module"=>"User","action"=>"company_index"),
-									array("name"=>"待审核会员","module"=>"User","action"=>"company_register"),
-									array("name"=>"会员信息","module"=>"User","action"=>"company_info"),
-									array("name"=>"会员回收站","module"=>"User","action"=>"company_trash"),
-							),
-					),
+					//"company"	=>	array(
+//							"name"	=>	"企业会员",
+//							"key"	=>	"company",
+//							"nodes"	=>	array(
+//									array("name"=>"企业会员","module"=>"User","action"=>"company_index"),
+//									array("name"=>"待审核会员","module"=>"User","action"=>"company_register"),
+//									array("name"=>"会员信息","module"=>"User","action"=>"company_info"),
+//									array("name"=>"会员回收站","module"=>"User","action"=>"company_trash"),
+//							),
+//					),
 					"other"	=>	array(
 							"name"	=>	"其他信息",
 							"key"	=>	"other",
@@ -128,13 +128,13 @@ return array(
 							),
 					),
 					
-					/*"ecvtype"	=>	array(
-							"name"	=>	"优惠券管理",
-							"key"	=>	"ecvtype",
-							"nodes"	=>	array(
-									array("name"=>"优惠券类型","module"=>"EcvType","action"=>"index"),
-							),
-					),*/
+//					"ecvtype"	=>	array(
+//							"name"	=>	"优惠券管理",
+//							"key"	=>	"ecvtype",
+//							"nodes"	=>	array(
+//									array("name"=>"优惠券类型","module"=>"EcvType","action"=>"index"),
+//							),
+//					),
 					"userconfig"	=>	array(
 							"name"	=>	"相关配置",
 							"key"	=>	"userconfig",
