@@ -115,7 +115,7 @@
 					$detail['pInAmt'] = str_replace(',', '',number_format(round($v['month_repay_money'] + $v['impose_money'],2),2));//转入金额   否   格式：0.00    必须大于0  且大于转入方手续费
 					
 					if ($v['t_user_id']){
-						//债权转让后,还款时，转给：承接者, 在债权转让后需要更新 fanwe_deal_load_repay.t_user_id 数据值
+						//债权转让后,还款时，转给：承接者, 在债权转让后需要更新 xd_deal_load_repay.t_user_id 数据值
 						$pInAcctNo = $v['t_ips_acct_no'];
 					}else{
 						$pInAcctNo = $v['ips_acct_no'];

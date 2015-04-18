@@ -91,7 +91,7 @@ return array(
 'PROMOTE_MSG_PAGE'=>'0',
 'APNS_MSG_PAGE'=>'0',
 'COOKIE_PATH'=>'/',
-'COMPANY'=>'福建p2p信贷金融信息服务有限公司',
+'COMPANY'=>'p2p信贷金融信息服务有限公司',
 'COMPANY_ADDRESS'=>'福州台江区',
 'COMPANY_REG_ADDRESS'=>'福州市',
 'MANAGE_FEE'=>'0.3',

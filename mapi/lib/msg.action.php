@@ -18,8 +18,7 @@ class msg
 		$user_id  = intval($user['id']);//user_id
 		if ($user_id >0){
 			
-			$rel_id = intval($GLOBALS['request']['deal_id']);   //deal_id  投资项目id
-			//insert into fanwe_message (title,content,create_time,rel_table,rel_id,user_id,is_effect) values ('我是一只小狼狗','啦啦啦啦啦','1400616627','deal','102','44','1');
+			$rel_id = intval($GLOBALS['request']['deal_id']);   //deal_id  投资项目id;
 		
 			$data['user_id'] = $user_id;
 			$data['rel_id'] = $rel_id;

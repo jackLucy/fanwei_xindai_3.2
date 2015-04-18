@@ -56,7 +56,7 @@ class uc_bank
 					
 				$root['ips_money'] = $result['pBalance'];
 				
-				//提现 http://p2p.fanwe.net/index.php?ctl=collocation&act=DoDwTrade&user_type=0&from=app&user_id=44&pTrdAmt=10
+				//提现
 				$app_url = APP_ROOT."/index.php?ctl=collocation&act=DoDwTrade&user_type=0&pTrdAmt=parm_amt&user_id=".$user_id."&from=".$GLOBALS['request']['from'];
 				$root['dw_url'] = str_replace("/mapi", "", SITE_DOMAIN.$app_url);
 			}else{

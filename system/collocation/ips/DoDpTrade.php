@@ -34,7 +34,7 @@
 	/**
 	 * 充值
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param float $pTrdAmt 充值金额
 	 * @param string $pTrdBnkCode 银行编号
 	 * @param unknown_type $MerCode

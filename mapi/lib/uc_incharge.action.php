@@ -90,7 +90,7 @@ class uc_incharge
 				$root['app_url'] = str_replace("/mapi", "", SITE_DOMAIN.$app_url);
 				$root['acct_url'] = $root['app_url'];
 				
-				//充值 http://p2p.fanwe.net/index.php?ctl=collocation&act=DoDpTrade&user_type=0&from=app&user_id=44&pTrdBnkCode=00004&pTrdAmt=10000
+				//充值 
 				$app_url = APP_ROOT."/index.php?ctl=collocation&act=DoDpTrade&user_type=0&pTrdBnkCode=parm_bnk&pTrdAmt=parm_amt&user_id=".$user_id."&from=".$GLOBALS['request']['from'];
 				$root['dp_url'] = str_replace("/mapi", "", SITE_DOMAIN.$app_url);
 												

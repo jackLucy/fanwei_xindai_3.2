@@ -37,7 +37,7 @@
 	/**
 	 * 用户提现
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param float $pTrdAmt 提现金额
 	 * @param unknown_type $MerCode
 	 * @param unknown_type $cert_md5

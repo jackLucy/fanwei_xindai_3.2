@@ -73,7 +73,7 @@ class Ips_collocation implements collocation {
 	/**
 	 * 创建新帐户
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param unknown_type $MerCode
 	 * @param unknown_type $cert_md5
 	 * @param unknown_type $post_url
@@ -132,7 +132,7 @@ class Ips_collocation implements collocation {
 		/**
 	 * 账户余额查询(WS) 
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param unknown_type $MerCode
 	 * @param unknown_type $cert_md5
 	 * @param unknown_type $ws_url
@@ -168,7 +168,7 @@ class Ips_collocation implements collocation {
 	/**
 	 * 充值
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param float $pTrdAmt 充值金额
 	 * @param string $pTrdBnkCode 银行编号
 	 * @param unknown_type $MerCode
@@ -185,7 +185,7 @@ class Ips_collocation implements collocation {
 	/**
 	 * 用户提现
 	 * @param int $user_id
-	 * @param int $user_type 0:普通用户fanwe_user.id;1:担保用户fanwe_deal_agency.id
+	 * @param int $user_type 0:普通用户xd_user.id;1:担保用户xd_deal_agency.id
 	 * @param float $pTrdAmt 提现金额
 	 * @param unknown_type $MerCode
 	 * @param unknown_type $cert_md5
@@ -251,7 +251,7 @@ class Ips_collocation implements collocation {
 	 * 转帐
 	 * @param int $pTransferType;//转账类型  否  转账类型  1：投资（报文提交关系，转出方：转入方=N：1），  2：代偿（报文提交关系，转出方：转入方=1：N），  3：代偿还款（报文提交关系，转出方：转入方=1：1），  4：债权转让（报文提交关系，转出方：转入方=1：1），  5：结算担保收益（报文提交关系，转出方：转入方=1： 1）
 	 * @param int $deal_id  标的id
-	 * @param string $ref_data 逗号分割的,代偿，代偿还款列表; 债权转让: id; 结算担保收益:金额，如果为0,则取fanwe_deal.guarantor_pro_fit_amt ;
+	 * @param string $ref_data 逗号分割的,代偿，代偿还款列表; 债权转让: id; 结算担保收益:金额，如果为0,则取xd_deal.guarantor_pro_fit_amt ;
 	 * @return string
 	 */
 	function Transfer($pTransferType, $deal_id, $ref_data){

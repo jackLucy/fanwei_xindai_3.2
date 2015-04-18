@@ -47,7 +47,7 @@
 	 * 转帐
 	 * @param int $pTransferType;//转账类型  否  转账类型  1：投资（报文提交关系，转出方：转入方=N：1），  2：代偿（报文提交关系，转出方：转入方=1：N），  3：代偿还款（报文提交关系，转出方：转入方=1：1），  4：债权转让（报文提交关系，转出方：转入方=1：1），  5：结算担保收益（报文提交关系，转出方：转入方=1： 1）
 	 * @param int $deal_id  标的id	 
-	 * @param string $ref_data 逗号分割的, 1：投资,填还款日期(int)  ; 2代偿，3代偿还款列表; 4债权转让: id; 5结算担保收益:金额，如果为0,则取fanwe_deal.guarantor_pro_fit_amt ;
+	 * @param string $ref_data 逗号分割的, 1：投资,填还款日期(int)  ; 2代偿，3代偿还款列表; 4债权转让: id; 5结算担保收益:金额，如果为0,则取xd_deal.guarantor_pro_fit_amt ;
 	 * @param int $MerCode  商户ID
 	 * @param string $cert_md5 
 	 * @param string $post_url

@@ -35,7 +35,7 @@ class SqlDump extends Think
         $sys_info['mysql_ver']  = mysql_get_server_info();
         $sys_info['date']       = date('Y-m-d H:i:s');
 
-        $head = "-- fanwe SQL Dump Program\r\n".
+        $head = "-- SQL Dump Program\r\n".
                  "-- " . $sys_info['web_server'] . "\r\n".
                  "-- \r\n".
                  "-- DATE : ".$sys_info["date"]."\r\n".

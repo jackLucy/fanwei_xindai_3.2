@@ -26,8 +26,8 @@ class es_session
 	}
 	static function start()
 	{
-		if($_GET['FANWE_SESSION_ID']){
-			session_id(strim($_GET['FANWE_SESSION_ID']));
+		if($_GET['XINDAI_SESSION_ID']){
+			session_id(strim($_GET['XINDAI_SESSION_ID']));
 		}
 		session_set_cookie_params(0,app_conf("COOKIE_PATH"),app_conf("DOMAIN_ROOT"),false,true);
 		@session_start();

@@ -68,7 +68,7 @@ function get_deal_list($limit="",$cate_id=0, $where='',$orderby = '',$user_name=
 		$count_sql.=" and is_effect = 1 and is_delete = 0 ";
 		
 	if(es_cookie::get("shop_sort_field")=="ulevel"){
-		$extfield = ",(SELECT u.level_id FROM fanwe_user u WHERE u.id=user_id ) as ulevel";
+		$extfield = ",(SELECT u.level_id FROM ".DB_PREFIX."user u WHERE u.id=user_id ) as ulevel";
 	}
 
 	$sql = "select *,start_time as last_time,(load_money/borrow_amount*100) as progress_point,(start_time + enddate*24*3600 - ".$time.") as remain_time $extfield from ".DB_PREFIX."deal where 1 = 1 ";
