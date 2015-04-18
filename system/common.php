@@ -1,10 +1,10 @@
 <?php
 // +----------------------------------------------------------------------
-// | p2p借贷系统
+// | Fanwe 方维p2p借贷系统
 // +----------------------------------------------------------------------
-// | Copyright (c) 2013 http://www.vonwey.com All rights reserved.
+// | Copyright (c) 2011 http://www.fanwe.com All rights reserved.
 // +----------------------------------------------------------------------
-// | Author: Vonwey(vonwey@163.com)
+// | Author: 云淡风轻(88522820@qq.com)
 // +----------------------------------------------------------------------
 
 //前后台加载的函数库
@@ -3669,8 +3669,7 @@ function hideEmail($email){
 
 function FW_DESPWD($pwd){
 	$pwd = unescape(base64_decode($pwd));
-	$pwd = substr($pwd,strlen(LOGIN_DES_KEY().""),strlen($pwd));
-	$pwd = substr($pwd,0,strlen($pwd) - strlen("软件"));
+	$pwd = substr($pwd,strlen(LOGIN_DES_KEY()),strlen($pwd));
 	return $pwd;
 }
 

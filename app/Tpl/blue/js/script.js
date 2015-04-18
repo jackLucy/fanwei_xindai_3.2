@@ -2437,5 +2437,5 @@ function des(str){
 }
 
 function FW_Password (pwd){
-	return des(escape(__LOGIN_KEY+"%u65B9%u7EF4"+pwd+"%u8F6F%u4EF6"));
+	return des(escape(__LOGIN_KEY+pwd));
 }
