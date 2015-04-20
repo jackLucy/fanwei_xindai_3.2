@@ -2,7 +2,7 @@
 {if $view_info_list}
 	<style type="text/css">
 	.liys{
-		padding: 0px 10px; overflow: hidden; float: left; width: 104px; height: 123px;
+		padding: 0px 10px; overflow: hidden; float: left; width: 200px; height: 180px;
 	}
 	.liys  div {
 	    display: table;
@@ -20,7 +20,7 @@
           		{foreach from =$view_info_list item="abc" key=key}
               	<li class="liys">
                	<a href='{$abc.img}' rel="lightbox-myGroup" title="{$abc.name}">
-               		<img src='{$abc.img}' style="width:104px;height: 94px"/>
+               		<img src='{$abc.img}' style="width:200px;height: 150px"/>
                	</a>
                	<div style="padding-top: 5px;">{$abc.name}</div>
                	</li>

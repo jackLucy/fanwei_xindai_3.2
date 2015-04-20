@@ -70,6 +70,7 @@ float: left; }
 .register_box .user-lr-box-left .field .f-input-tip span{ float:left;}
 .register_box .user-lr-box-left .act{ margin-left:130px}
 .register_box .user-lr-box-right{width:285px; padding-right:30px;margin-top:50px;}
+.register_box .user-lr-box-right .ulr_flag{ margin-left:-100px; margin-top:50px;}
 .register_box .user-lr-box-right a:hover{color:#00bef0;}
 .user-lr-box-left .field .holder_tip{
 	position: absolute;

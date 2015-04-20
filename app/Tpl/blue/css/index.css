@@ -22,13 +22,13 @@ body{background:#fff;}
 
 .index_money{ background:#f1f4f5; color:#767777;}
 .total{ line-height:normal; margin-bottom:20px; overflow:hidden; padding:10px 0; width:1100px; font-size:16px;}
-.total .t{line-height:normal; float:left; width:310px;}
+.total .t{line-height:normal; float:left; width:240px;}
 .total p{line-height:normal; color:#000; margin-bottom:24px; }
 .total .money{ color:#4d4d4d; font-size:18px; font-weight:bold; padding:0px 5px;}
 .total .money span{ font-family:vaniregular; font-size:36px; }
 .total em{ color:#4d4d4d; }
-.total .note{ background:url(../images/index_icon5.png) 0 2px no-repeat; padding-left:26px; width:340px;}
-.total .tal3{ width:360px;}
+.total .note{ background:url(../images/index_icon5.png) 0 2px no-repeat; padding-left:26px; width:300px;}
+.total .tal3{ width:240px;}
 .total .tal3{ text-align:right;}
 
 .index_left{ background-color:#fff; border:1px solid #e3e3e3; width:1098px; margin-bottom:40px;}
@@ -39,26 +39,44 @@ body{background:#fff;}
 .r-block .gray_title{padding-right:6px}
 .r-block li{ height:26px; line-height:26px}
 .r-block a{ color:#535353}
-.i_deal_list { color:#666; font-family:"Microsoft YaHei"; text-align:center; }
-.i_deal_list .item{ border-bottom:1px dashed #E5E5E5;  padding:14px 0}
+.i_deal_list { color:#666; font-family:"Microsoft YaHei"; text-align:center;}
+.i_deal_list table{ padding:10px;}
+.i_deal_list .item{ border-bottom:1px dashed #E5E5E5;  padding:14px 0;}
 .i_deal_list .item .tit{ height:28px; line-height:28px; font-size:14px}
 .i_deal_list .item .tit .cate_tip{ background:url(../images/cate_tip.gif) no-repeat 0 0; height:23px; line-height:23px; padding-left:13px; width:75px; font-weight:normal; font-size:12px; color:#FD6000}
 .i_deal_list .item .tit .cate_tip_1{background:url(../images/cate_tip_1.gif) no-repeat 0 0;color:#FD6000}
 .i_deal_list .item .tit .cate_tip_2{background:url(../images/cate_tip_2.gif) no-repeat 0 0;color:#000}
 .i_deal_list .item .tit .cate_tip_3{background:url(../images/cate_tip_3.gif) no-repeat 0 0;color:red}
 .i_deal_list .item .tit .cate_tip_4{background:url(../images/cate_tip_4.gif) no-repeat 0 0;color:#567BB2}
-.i_deal_list .item_1{ background:#FAFCFB}
 .i_deal_list .item .detail{ width:530px}
 .i_deal_list .item .detail .f_red{ color:#C20000; font-family:Arial; font-weight:bolder;}
-.i_deal_list .item .detail .info{ font-size:12px; 
-padding: 3px 0 5px 0;
-width: 175px;
-color: #3c3c3c;}
+.i_deal_list .item .detail .info{ font-size:12px; padding: 3px 0 5px 0;width: 175px;color: #3c3c3c;}
 .i_deal_list .item .detail .info2{width: 205px;}
 .i_deal_list .item .detail .info3{width: 140px;}
 .i_deal_list .item .detail .progressBar{width:126px; margin-top:2px}
 .i_deal_list table td{ color:#666; padding:20px 0; text-align:center; }
 .i_deal_list .more{ color:#a9a9a9; display:block; font-size:16px; font-weight:normal; margin-top:20px; }
+
+.index_left .panes { padding-bottom:20px;}
+.i_deal_list ul{ border:1px solid #e3e3e3; background:#f5f5f5; padding:17px 50px 9px 22px; margin:10px; text-align:left; line-height:30px; color:#333333;}
+.i_deal_list .gray{ color:#a6a6a6;}
+.i_deal_list .m_money{ color:#fc8026;}
+.i_deal_list li{ float:left; }
+.i_deal_list_left { border:1px solid #e3e3e3; padding:4px; background:#fff; margin-right:20px;}
+.i_deal_list_left img{ width:80px; height:80px;}
+.i_deal_list_mid{ margin:0px 20px; width:400px;}
+.i_deal_list_mid span.pub { margin-left:40px;}
+.i_deal_list_mid .mitem{ width:200px; float:left;}
+
+.i_deal_list li.i_deal_list_right { width:263px; float:right}
+.i_deal_list_right .f_white{background-color:#00a7f8; display:block; height:35px; line-height:35px; margin:0 auto; text-align:center; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.i_deal_list_right span.f_orange{ background-color:#ffb226; }
+.i_deal_list_right span.f_gray{ background-color:#dfdcdc; }
+.i_deal_list_right span.f_green{ background-color:#61c01a; }
+
+.i_deal_list_right .progressBar { width:220px; height:3px; padding:0px; margin:0px; margin-top:13px; -moz-border-radius: 1px; -khtml-border-radius: 1px; -webkit-border-radius: 1px; border-radius: 1px;}
+.i_deal_list_right .progressBar div.c{ height:3px; line-height:3px;}
+.i_deal_list_right  .m_rate{ margin-left:10px;}
 
 .notice-list{ padding: 5px 0px; }
 .notice-list a{ color:#333333;}

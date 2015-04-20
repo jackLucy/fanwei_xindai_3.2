@@ -204,6 +204,7 @@ hr{border:none;border-top:1px solid #eaeaea;}
 /*自动高对齐*/
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
 .clear{ clear:both;}
+.cmp{ margin:0px; padding:0px;}
 *html .clearfix{height:1%;}
 *+html .clearfix{height:1%;}
 .cf{zoom:1}
@@ -279,6 +280,7 @@ hr{border:none;border-top:1px solid #eaeaea;}
 .main_nav li a{color:#555;display:block;font-family:"Microsoft YaHei";font-size:16px;overflow:hidden;text-decoration:none; text-align:center;}
 .main_nav li a:hover,.main_nav li.jcur a,.main_nav li.current a{color:#555;}
 .main_nav li.jcur,.main_nav li.current{ background:url(../images/nav_li_bg.png) no-repeat bottom;}
+.main_nav li.jcur,.main_nav li.current a{ color:#00a7f8;}
 .main_nav li.jcur a{ color:#fff; }
 .main_snav{height:40px;width:1100px;padding:0;line-height:40px;}
 .main_snav a{display:inline-block;float:left;margin-right:15px;color:#333;white-space:nowrap;word-break:keep-all;}
