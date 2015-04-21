@@ -1394,3 +1394,26 @@ color: #00bef0;
 
 .no_msg{ text-align:center; padding-top:70px;}
 .no_msg span{ display:block;}
+
+/*贷款列表*/
+.index_left .panes { padding-bottom:20px;}
+.i_deal_list ul{ border:1px solid #e3e3e3; background:#f5f5f5; padding:17px 50px 9px 22px; margin:10px; text-align:left; line-height:30px; color:#333333;}
+.i_deal_list .gray{ color:#a6a6a6;}
+.i_deal_list .m_money{ color:#fc8026;}
+.i_deal_list li{ float:left; }
+.i_deal_list_left { border:1px solid #e3e3e3; padding:4px; background:#fff; margin-right:20px;}
+.i_deal_list_left img{ width:80px; height:80px;}
+.i_deal_list .idl_title{ width:160px; overflow:hidden; height:30px;}
+.i_deal_list_mid{ margin:0px 20px; width:400px;}
+.i_deal_list_mid span.pub { margin-left:40px;}
+.i_deal_list_mid .mitem{ width:200px; float:left;}
+
+.i_deal_list li.i_deal_list_right { width:263px; float:right}
+.i_deal_list_right .f_white{background-color:#00a7f8; display:block; height:35px; line-height:35px; margin:0 auto; text-align:center; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.i_deal_list_right span.f_orange{ background-color:#ffb226; }
+.i_deal_list_right span.f_gray{ background-color:#dfdcdc; }
+.i_deal_list_right span.f_green{ background-color:#61c01a; }
+
+.i_deal_list_right .progressBar { width:215px; height:3px; padding:0px; margin:0px; margin-top:13px; -moz-border-radius: 1px; -khtml-border-radius: 1px; -webkit-border-radius: 1px; border-radius: 1px;}
+.i_deal_list_right .progressBar div.c{ height:3px; line-height:3px;}
+.i_deal_list_right  .m_rate{ margin-left:10px;}

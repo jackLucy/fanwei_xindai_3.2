@@ -43,7 +43,7 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
         <ul class="clearfix">
             <li class="i_deal_list_left"><img src="{$deal.icon}" width="80" height="80"/></li>
             <li class="">
-            	<div><a href="{$deal.url}" target="_blank">{$deal.sub_name}</a></div>
+            	<div class="idl_title"><a href="{$deal.url}" target="_blank" title="{$deal.name}">{$deal.sub_name}</a></div>
                 <div>年化收益：{$deal.rate} %</div>
                 <div>信用等级：<img src="{$TMPL}/images/{$deal.user.point_level}.png" align="absmiddle" title="{$deal.user.point_level}" alt="{$deal.user.point_level}" height="40" /></div>
             </li>

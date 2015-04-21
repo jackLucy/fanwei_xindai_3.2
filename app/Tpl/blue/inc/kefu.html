@@ -9,10 +9,22 @@ $this->_var['kfcss'][] = $this->_var['TMPL_REAL']."/css/kefu.css";
   	<a style="display:block" id="aFloatTools_Show" class="btnOpen" title="查看在线客服" style="top:20px" href="javascript:void(0);">展开</a>
   	<a style="display:none" id="aFloatTools_Hide" class="btnCtn" title="关闭在线客服" style="top:20px" href="javascript:void(0);">收缩</a>
   </div>
-  <div id="divFloatToolsView" class="floatR" style="display: none;width: 140px;">
+  <div id="divFloatToolsView" class="floatR" style="display: none;width: 220px;">
     <div class="cn">
       <h3 class="titZx">{function name="app_conf" value="SITE_TITLE"}在线客服</h3>
       <ul>
+      
+          <li class="n2_lb1_upper">
+            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$online_qq.0.qq}&site=qq&menu=yes" rel="nofollow">	
+                <img src="{$TMPL}/images/online_kefu.jpg" width="80" height="100" alt="">
+            </a>
+            <h4>今天我值班</h4>
+            <p>值班客服-{$online_qq.0.name}</p>
+            <p>值班时间:09:00-18:00</p>
+            <p>午休时间:12:00-13:30</p>
+          </li>
+  
+      
       	{foreach from="$online_qq" item="qq"}
         <li><span>{$qq.name}</span> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$qq.qq}&site=qq&menu=yes"><img border="0" src="{$TMPL}/images/button-custom-qq.gif" alt="点击这里给我发消息" title="点击这里给我发消息"/></a> </li>
        {/foreach}

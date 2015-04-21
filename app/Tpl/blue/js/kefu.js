@@ -1,6 +1,6 @@
 $(function(){
-	if($("#divFloatToolsView").outerHeight() < 250)
-		$("#floatTools").height(250);
+	if($("#divFloatToolsView").outerHeight() < 150)
+		$("#floatTools").height(150);
 	else
 		$("#floatTools").height($("#divFloatToolsView").outerHeight());
 	$("#aFloatTools_Show").click(function(){
