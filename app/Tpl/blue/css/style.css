@@ -1403,11 +1403,12 @@ color: #00bef0;
 .i_deal_list li{ float:left; }
 .i_deal_list_left { border:1px solid #e3e3e3; padding:4px; background:#fff; margin-right:20px;}
 .i_deal_list_left img{ width:80px; height:80px;}
+.i_deal_list_title{ width:160px;}
 .i_deal_list .idl_title{ width:160px; overflow:hidden; height:30px;}
 .i_deal_list_mid{ margin:0px 20px; width:400px;}
 .i_deal_list_mid span.pub { margin-left:25px;}
 .i_deal_list_mid .mitem{ width:200px; float:left;}
-.i_deal_list_mid span.reward{ border: 1px solid #00a7f8; font-size: 12px; padding: 1px 2px;}
+.i_deal_list_mid span.reward{ border: 1px solid #00a7f8; font-size: 12px;}
 .i_deal_list_mid span.reward label{ background: #00a7f8; padding: 4px 5px; color: #fff;}
 
 .i_deal_list li.i_deal_list_right { width:263px; float:right}
@@ -1418,4 +1419,6 @@ color: #00bef0;
 
 .i_deal_list_right .progressBar { width:215px; height:3px; padding:0px; margin:0px; margin-top:13px; -moz-border-radius: 1px; -khtml-border-radius: 1px; -webkit-border-radius: 1px; border-radius: 1px;}
 .i_deal_list_right .progressBar div.c{ height:3px; line-height:3px;}
-.i_deal_list_right  .m_rate{ margin-left:10px;}
+.i_deal_list_right .m_rate{ margin-left:10px;}
+.i_deal_list_right .idlr_remain{ position:relative;}
+.i_deal_list_right .idlr_sm{ position:absolute; right:0px; top:0px; *line-height:20px;}

@@ -159,8 +159,8 @@
                             </div>
                         </li>
                         <li class="i_deal_list_right">
-                            <div>剩余金额：<span class="m_money">{if $deal.uloadtype eq 0}{$deal.need_money}{else}{$deal.need_portion}{/if}</span><span class="f_r"> 已投<span class="m_money">{$deal.buy_count}</span>笔</span></div>
-                            <div>
+                            <div class="idlr_remain">剩余金额：<span class="m_money">{if $deal.uloadtype eq 0}{$deal.need_money}{else}{$deal.need_portion}{/if}</span><span class="idlr_sm"> 已投<span class="m_money">{$deal.buy_count}</span>笔</span></div>
+                			<div class="idlr_bar">
                                 <div class="blueProgressBar progressBar f_l">
                                     <div class="p">
                                     {if  $deal.deal_status eq 5}
