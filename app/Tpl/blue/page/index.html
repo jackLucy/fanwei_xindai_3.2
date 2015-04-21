@@ -48,7 +48,13 @@ $this->_var['indexcss'][] = $this->_var['TMPL_REAL']."/css/index.css";
                 <div>信用等级：<img src="{$TMPL}/images/{$deal.user.point_level}.png" align="absmiddle" title="{$deal.user.point_level}" alt="{$deal.user.point_level}" height="40" /></div>
             </li>
             <li class="i_deal_list_mid">
-            	<div><img src="{$deal.cate_info.icon}"  height="25" class="ico" title="{$deal.cate_info.name}" /><span class="gray pub">发布时间：{$deal.publish_time_format}</span></div>
+            	<div>
+                	<img src="{$deal.cate_info.icon}"  height="25" class="ico" title="{$deal.cate_info.name}" />
+                    {if $deal.user_bid_rebate > 0}
+                    <span class="reward"><label>奖</label> {$deal.user_bid_rebate}%</span>
+                    {/if}
+                    <span class="gray pub">发布时间：{$deal.publish_time_format}</span>
+                </div>
                 <div>
                 	<div class=" mitem">
                         <div>借款金额：<span class="m_money">¥{$deal.borrow_amount}</span></div>

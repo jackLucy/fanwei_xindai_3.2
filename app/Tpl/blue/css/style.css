@@ -1405,8 +1405,10 @@ color: #00bef0;
 .i_deal_list_left img{ width:80px; height:80px;}
 .i_deal_list .idl_title{ width:160px; overflow:hidden; height:30px;}
 .i_deal_list_mid{ margin:0px 20px; width:400px;}
-.i_deal_list_mid span.pub { margin-left:40px;}
+.i_deal_list_mid span.pub { margin-left:25px;}
 .i_deal_list_mid .mitem{ width:200px; float:left;}
+.i_deal_list_mid span.reward{ border: 1px solid #00a7f8; font-size: 12px; padding: 1px 2px;}
+.i_deal_list_mid span.reward label{ background: #00a7f8; padding: 4px 5px; color: #fff;}
 
 .i_deal_list li.i_deal_list_right { width:263px; float:right}
 .i_deal_list_right .f_white{background-color:#00a7f8; display:block; height:35px; line-height:35px; margin:0 auto; text-align:center; -moz-border-radius:5px; -khtml-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
