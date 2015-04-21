@@ -1,0 +1,58 @@
+<script type="text/javascript" src="{$TMPL}/js/jscharts_cr.js"></script>
+<div class="list">
+	<div class="list_title clearfix">
+		<div class="cur"><a href="{url x="index" r="uc_autobid"}">{$page_title}</a></div>
+        <div><a href="{url x="index" r="uc_autobid#add"}">添加投标</a></div>
+	</div>
+	<div class="list_cont">
+		<div class="i_deal_list clearfix">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody>
+					<tr border="0" style="background-color:#00bef0; color:#fff; height:34px;">
+						<th style="width:10%">是否开启</th>
+						<th style="width:10%">投注金额</th>
+						<th style="width:10%">利息范围</th>
+						<th style="width:10%">借款期限</th>
+                        <th style="width:15%">信用等级</th>
+                        <th style="width:10%">投标分类</th>
+                        <th style="width:10%">保留金额</th>
+						<th>操作</th>
+					</tr>
+					{foreach from=$list item="item" key=key name="item"}
+					<tr class="item {if $key mod 2 eq 1}item_1{/if}" {if $smarty.foreach.deal.last}style="border-bottom:0"{/if}>
+					
+						<td>{if $item.is_effect}<a href="{url x="shop" r="uc_autobid#autoopen" p="id=$item.id&is_effect=0"}">开启</a>{else}<a href="{url x="shop" r="uc_autobid#autoopen" p="id=$item.id&is_effect=1"}">关闭</a>{/if}</td>
+						<td>¥{$item.fixed_amount}</td>
+                        <td>{$item.min_rate}% - {$item.max_rate}%</td>
+                        <td>{$item.min_period}月 - {$item.max_period}月</td>
+                        <td>{$item.min_level} - {$item.max_level}</td>
+						<td>{foreach from="$deal_cates" item="cate"}
+                            {if in_array($cate.id,$item.deal_cates)}{$cate.name},{/if}
+                            {/foreach}
+                        </td>
+                        <td>¥{$item.retain_amount}</td>
+						<td>
+							<a href="{url x="shop" r="uc_autobid#add" p="id=$item.id"}" class="true_btn" style="color:#fff; float:right;">编辑</a><a href="{url x="shop" r="uc_autobid#del" p="id=$item.id"}" class="btn_del">{$LANG.DELETE}</a>
+						</td>
+					</tr>
+					{/foreach}
+				</tbody>
+			</table>
+			<div class="pages">{$pages}</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	var p_width=$(".i_deal_list p").width();
+   	var box_width=$(".i_deal_list .graph-box").width();
+   	var left_w=(box_width/2)-(p_width/2);
+
+   	$(".i_deal_list p").css("left",left_w+"px");
+	$("#my_favoriteLoan_list .item").hover(function(){
+		$(this).css({"background":"#f7f7f7"});
+	},function(){
+		$(this).css({"background":"#fff"});
+	});
+})
+</script>

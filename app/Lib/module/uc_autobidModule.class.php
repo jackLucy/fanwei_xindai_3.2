@@ -12,6 +12,36 @@ require APP_ROOT_PATH.'app/Lib/uc.php';
 class uc_autobidModule extends SiteBaseModule
 {
     function index() {
+    	$GLOBALS['tmpl']->assign("page_title",'自动投标');
+		
+		$deal_cates  = load_auto_cache("cache_deal_cate");
+    	$GLOBALS['tmpl']->assign("deal_cates",$deal_cates);
+    	
+    	$level_list=load_auto_cache("level");
+		
+		$level = $level_list['list'];
+		if(!empty($level)){
+			foreach($level as $key=>$val){
+				$levels[$val['id']] = $val['name'];
+			}
+		}
+    	
+    	$list = $GLOBALS['db']->getAll("SELECT * FROM ".DB_PREFIX."user_autobid WHERE user_id = '".$GLOBALS['user_info']['id']."'");
+		if(!empty($list)){
+			foreach($list as $key=>$val){
+				$list[$key]['min_level'] = $levels[$val['min_level']]['name'];
+				$list[$key]['max_level'] = $levels[$val['max_level']]['name'];
+				$list[$key]['deal_cates'] = explode(",",$val['deal_cates']);
+			}
+		}
+		
+    	$GLOBALS['tmpl']->assign("list",$list);
+    	
+    	$GLOBALS['tmpl']->assign("inc_file","inc/uc/uc_autobid_list.html");
+		$GLOBALS['tmpl']->display("page/uc.html");
+    }
+	
+	function add() {
     	$GLOBALS['tmpl']->assign("page_title",$GLOBALS['lang']['UC_AUTO_BID']);
     	
     	$deal_cates  = load_auto_cache("cache_deal_cate");
@@ -58,10 +88,12 @@ class uc_autobidModule extends SiteBaseModule
     	rsort($rate_list);
     	$GLOBALS['tmpl']->assign("max_rate",$rate_list);
     	
+    	if($id = intval($_REQUEST['id'])){
+			$autobid = $GLOBALS['db']->getRow("SELECT * FROM ".DB_PREFIX."user_autobid WHERE id = $id");
     	
-    	$autobid = $GLOBALS['db']->getRow("SELECT * FROM ".DB_PREFIX."user_autobid WHERE user_id = '".$GLOBALS['user_info']['id']."'");
+    		$autobid['deal_cates'] = explode(",",$autobid['deal_cates']);
+		}
     	
-    	$autobid['deal_cates'] = explode(",",$autobid['deal_cates']);
     	
     	$GLOBALS['tmpl']->assign("autobid",$autobid);
     	
@@ -74,10 +106,12 @@ class uc_autobidModule extends SiteBaseModule
     	$GLOBALS['tmpl']->assign("inc_file","inc/uc/uc_autobid.html");
 		$GLOBALS['tmpl']->display("page/uc.html");
     }
+	
     function save(){
     	filter_request($_POST);
     	
-    	$data['user_id'] = intval($GLOBALS['user_info']['id']);
+    	$data['id'] = intval($_POST['id']);
+		$data['user_id'] = intval($GLOBALS['user_info']['id']);
     	//每次投标金额
     	$data['fixed_amount'] = intval($_POST['fixedamount']);
     	if($data['fixed_amount']<50 || $data['fixed_amount']%50!=0){
@@ -115,9 +149,9 @@ class uc_autobidModule extends SiteBaseModule
     	
     	$data['deal_cates'] = implode(",",$_POST['deal_cate']);
     	
-    	if($GLOBALS['db']->getOne("SELECT count(*) FROM ".DB_PREFIX."user_autobid WHERE user_id=".$data['user_id']) > 0){
+    	if($data['id'] > 0){
     		//编辑
-    		$GLOBALS['db']->autoExecute(DB_PREFIX."user_autobid",$data,"UPDATE","user_id=".$data['user_id']);
+    		$GLOBALS['db']->autoExecute(DB_PREFIX."user_autobid",$data,"UPDATE","id=".$data['id']);
     	}
     	else{
     		//添加
@@ -129,19 +163,32 @@ class uc_autobidModule extends SiteBaseModule
     
     function autoopen(){
     	if(intval($GLOBALS['user_info']['id']) == 0){
-    		showErr($GLOBALS['lang']['PLEASE_LOGIN_FIRST'],1);
+    		showErr($GLOBALS['lang']['PLEASE_LOGIN_FIRST']);
     	}
     	if(!isset($_REQUEST['is_effect'])){
-    		showErr($GLOBALS['lang']['ERROR_TITLE'],1);
+    		//showErr($GLOBALS['lang']['ERROR_TITLE']);
     	}
-    	
+    	if(!isset($_REQUEST['id'])){
+    		showErr("请选中要编辑的标");
+    	}
     	if($GLOBALS['user_info']['money'] < 50 &&  intval($_REQUEST['is_effect']) == 1){
-    		showErr("余额不足50，无法开启",1);
+    		showErr("余额不足50，无法开启");
     	}
     	
     	$is_effect =  intval($_REQUEST['is_effect']);
-    	$GLOBALS['db']->autoExecute(DB_PREFIX."user_autobid",array("is_effect"=>$is_effect),"UPDATE","user_id=".intval($GLOBALS['user_info']['id']));
-    	showSuccess($GLOBALS['lang']['SUCCESS_TITLE'],1);
+    	$GLOBALS['db']->autoExecute(DB_PREFIX."user_autobid",array("is_effect"=>$is_effect),"UPDATE","user_id=".intval($GLOBALS['user_info']['id'])." and id=".intval($_REQUEST['id']));
+    	showSuccess($GLOBALS['lang']['SUCCESS_TITLE']);
+    }
+	
+	function del(){
+    	if(intval($GLOBALS['user_info']['id']) == 0){
+    		showErr($GLOBALS['lang']['PLEASE_LOGIN_FIRST']);
+    	}
+    	if(!isset($_REQUEST['id'])){
+    		showErr("请选中要编辑的标");
+    	}
+    	$GLOBALS['db']->query("delete from ".DB_PREFIX."user_autobid where user_id=".intval($GLOBALS['user_info']['id'])." and id=".intval($_REQUEST['id']));
+    	showSuccess($GLOBALS['lang']['SUCCESS_TITLE']);
     }
 }
 ?>

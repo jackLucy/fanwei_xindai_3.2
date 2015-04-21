@@ -81,16 +81,9 @@
 						</table>
 						<div class="blank20"></div>
 						<div class="btn">
-							<input type="hidden" name="is_effect" value="{if $autobid.is_effect eq 0}1{else}0{/if}" />
-							<span> 
-							{if $user_info.money gte 1000}
-							{if $autobid}<button class="{if $autobid.is_effect eq 0}true_btn close{else}reset_btn open{/if}" id="J_autoBidEnable" type="button">{if $autobid.is_effect eq 0}开启{else}关闭{/if}自动投标</button>{/if}
-							{else}
-			                <button class="true_btn" disabled="disabled" type="button">开启自动投标</button>
-							{/if}
-				            </span>
 							<span>
-				                <input class="sub_btn" type="submit" value="保存设置" />
+				                <input type="hidden" name="id" value="{$autobid.id}" />
+                                <input class="sub_btn" type="submit" value="保存设置" />
 				            </span>
 						</div>
 					</form>
