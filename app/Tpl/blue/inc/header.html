@@ -127,7 +127,7 @@ $(function() {
 			</div>	
 			<ul class="main_nav">
 				{foreach from=$nav_list item=nav_item}
-					<li class="n_{$nav_item.id} {if $nav_item.current eq 1}current{/if} mr5" rel='{$nav_item.id}'>
+					<li class="n_{$nav_item.id} {if $nav_item.current eq 1}current bdr3 {/if} mr5" rel='{$nav_item.id}'>
 						<a href="{$nav_item.url}"  target="{if $nav_item.blank eq 1}_blank{/if}">{$nav_item.name}</a>
 					</li>
 				{/foreach}
@@ -168,6 +168,9 @@ $(function() {
         </div>
         <div class="tal3 t">
             <div>本息保证金<span class="money">{$VIRTUAL_MONEY_3_FORMAT}</span>万</div>
+        </div>
+        <div class="tal3 t">
+            <div>投资者人数<span class="money">{$stats.total_user}</span>位</div>
         </div>
         <div class="blank1"></div>
     </div>
