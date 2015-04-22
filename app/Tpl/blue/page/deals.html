@@ -141,18 +141,19 @@
                         </li>
                         <li class="i_deal_list_mid">
                             <div>
-                                <img src="{$deal.cate_info.icon}"  height="25" class="ico" title="{$deal.cate_info.name}" />
-                                {if $deal.user_bid_rebate > 0}
-                                <span class="reward"><label>奖</label> {$deal.user_bid_rebate}%</span>
-                                {/if}
-                                <span class="gray pub">发布时间：{$deal.publish_time_format}</span>
-                            </div>
-                            <div>
                                 <div class=" mitem">
+                                    <div>
+                                        <img src="{$deal.cate_info.icon}"  height="25" class="ico" title="{$deal.cate_info.name}" />
+                                        {if $deal.user_bid_rebate > 0}
+                                        <span class="reward"><label>奖</label> {$deal.user_bid_rebate}%</span>
+                                        {/if}
+                                        
+                                    </div>
                                     <div>借款金额：<span class="m_money">¥{$deal.borrow_amount}</span></div>
                                     <div>还款方式：<span class="gray">{if $deal.loantype==0}等额本息{elseif $deal.loantype==1}付息还本{elseif $deal.loantype==2}到期还本息{/if}</span></div>
                                 </div>
                                 <div class=" mitem">
+                                    <div>发布时间：{$deal.publish_time_format}</div>
                                     <div>借款期限	：{$deal.repay_time}{if $deal.repay_time_type eq 0}天{else}个月{/if}</div>
                                     <div>剩余时间：<span class="gray">{$deal.remain_time_format}</span></div>
                                 </div>

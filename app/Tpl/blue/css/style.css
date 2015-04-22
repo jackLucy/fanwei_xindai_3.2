@@ -1398,7 +1398,7 @@ color: #00bef0;
 /*贷款列表*/
 .index_left .panes { padding-bottom:20px;}
 .i_deal_list ul{ border:1px solid #e3e3e3; background:#f5f5f5; padding:17px 50px 9px 22px; margin:10px; text-align:left; line-height:30px; color:#333333;}
-.i_deal_list .gray{ color:#a6a6a6;}
+.i_deal_list .gray{}
 .i_deal_list .m_money{ color:#fc8026;}
 .i_deal_list li{ float:left; }
 .i_deal_list_left { border:1px solid #e3e3e3; padding:4px; background:#fff; margin-right:20px;}

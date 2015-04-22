@@ -11,8 +11,7 @@ $this->_var['dealcss'][] = $this->_var['TMPL_REAL']."/css/deal.css";
 			<div class="tl">
 				<div class="lf">
 					<span><a href="{$deal.url}">{$deal.color_name}</a></span>
-					<img src="{$deal.cate_info.icon}" width="24" height="24" />
-					{$deal.cate_info.name}
+					<img src="{$deal.cate_info.icon}" title="{$deal.cate_info.name}" />
 					&nbsp;&nbsp;
 					借款人：<a href="{$u_info.url}" class="f_red" style="padding:0">{$u_info.user_name}</a>
 				</div>

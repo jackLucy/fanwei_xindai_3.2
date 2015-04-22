@@ -824,6 +824,146 @@ class UserAction extends CommonAction{
 		
 	}
 	
+	public function fund_export_csv($page = 1)
+	{
+		set_time_limit(0);
+		$limit = (($page - 1)*intval(app_conf("BATCH_PAGE_SIZE"))).",".(intval(app_conf("BATCH_PAGE_SIZE")));
+		
+		$title_arrays = array(
+				"0" => "结存",
+				"1" => "充值",
+				"2" => "投标成功",
+				"3" => "招标成功",
+				"4" => "偿还本息",
+				"5" => "回收本息",
+				"6" => "提前还款",
+				"7" => "提前回收",
+				"8" => "申请提现",
+				"9" => "提现手续费",
+				"10" => "借款管理费",
+				"11" => "逾期罚息",
+				"12" => "逾期管理费",
+				"13" => "人工充值",
+				"14" => "借款服务费",
+				"15" => "出售债权",
+				"16" => "购买债权",
+				"17" => "债权转让管理费",
+				"18" => "开户奖励",
+				"19" => "流标还返",
+				"20" => "投标管理费",
+				"21" => "投标逾期收入",
+				//"22" => "兑换",
+				"23" => "邀请返利",
+				"24" => "投标返利",
+				//"25" => "签到成功",
+				"26" => "逾期罚金（垫付后）",
+				"27" => "其他费用",
+		);
+		
+		$cate =isset($_REQUEST ['cate'])? (intval($_REQUEST ['cate']) >= 0 ? intval($_REQUEST['cate']) : -1) : -1;
+		
+		if (isset ( $_REQUEST ['_sort'] )) {
+			$sort = $_REQUEST ['_sort'] ? 'asc' : 'desc';
+		}
+		else{
+			$sort = "desc";
+		}
+		if (isset ( $_REQUEST ['_order'] )) {
+			$sorder = $_REQUEST ['_order'];
+		}
+		else{
+			$sorder = "id";
+		}
+		
+		switch($sorder){
+			case "user_name":
+				$order ="user_id";
+				break;
+			case "type_format":
+				$order ="type";
+				break;
+			default :
+				$order =$sorder;
+				break;
+		}
+		
+		$extWhere = " 1=1 ";
+		
+		if($cate>=0)
+		{
+			$extWhere .= " AND type = ".$cate;
+		}
+		
+		if(trim($_REQUEST['user_names'])!='')
+		{
+			$extWhere .= " and u.user_name like '%".trim($_REQUEST['user_names'])."%'";
+		}
+		$begin_time  = !isset($_REQUEST['begin_time'])? 0 : (trim($_REQUEST['begin_time']) =="" ? 0 : to_timespan($_REQUEST['begin_time'],"Y-m-d"));
+		$end_time  = !isset($_REQUEST['end_time'])? 0 : (trim($_REQUEST['end_time']) =="" ? 0 : to_timespan($_REQUEST['end_time'],"Y-m-d"));
+		
+		
+		if($begin_time > 0 || $end_time > 0){
+			if($end_time==0)
+			{
+				$extWhere .= " and uml.create_time >= $begin_time ";
+			}
+			else
+				$extWhere .= " and uml.create_time between  $begin_time and $end_time ";
+		}
+		
+		$_REQUEST['begin_time'] = to_date($begin_time ,"Y-m-d");
+		$_REQUEST['end_time'] = to_date($end_time ,"Y-m-d");
+		
+		$rs_count = $GLOBALS['db']->getOne("select count(*) from ".DB_PREFIX."user_money_log uml left join ".DB_PREFIX."user u on uml.user_id=u.id  where  $extWhere");
+		if($rs_count > 0){
+			if (! empty ( $_REQUEST ['listRows'] )) {
+				$listRows = $_REQUEST ['listRows'];
+			} else {
+				$listRows = '';
+			}
+			$list = $GLOBALS['db']->getAll("select uml.*,u.user_name  from ".DB_PREFIX."user_money_log uml left join ".DB_PREFIX."user u on uml.user_id=u.id  where $extWhere ORDER BY $order $sort LIMIT $limit");
+			
+			foreach($list as $k=>$v){
+				$n=$list[$k]['type'];
+				$list[$k]['type_format'] = $title_arrays[$n];
+			}
+			
+		}
+
+		if($list)
+		{
+			//register_shutdown_function(array(&$this, 'fund_export_csv'), $page+1);
+			
+			$user_value = array('id'=>'""','user_name'=>'""','type_format'=>'""','money'=>'""','account_money'=>'""','memo'=>'""','create_time_ymd'=>'""');
+			if($page == 1)
+	    	$content = iconv("utf-8","gbk","编号,用户名,操作类型,可用余额,备注,操作时间") . "\n";
+	    	
+	    	foreach($list as $k=>$v)
+			{	
+				$user_value = array();
+				$user_value['id'] = iconv('utf-8','gbk','"' . $v['id'] . '"');
+				$user_value['user_name'] = iconv('utf-8','gbk','"' . $v['user_name'] . '"');
+				$user_value['type_format'] = iconv('utf-8','gbk','"' . $v['type_format'] . '"');
+				$user_value['money'] = iconv('utf-8','gbk','"' . number_format($v['money'],2) . '"');
+				$user_value['account_money'] = iconv('utf-8','gbk','"' . number_format($v['account_money'],2) . '"');
+				$user_value['memo'] = str_replace(',','',iconv('utf-8','gbk','"' . $v['memo'] . '"'));
+				$user_value['create_time_ymd'] = iconv('utf-8','gbk','"' . $v['create_time_ymd'] . '"');
+			
+				$content .= implode(",", $user_value) . "\n";
+			}	
+			
+			
+			header("Content-Disposition: attachment; filename=user_account_log.csv");
+	    	echo $content;  
+		}
+		else
+		{
+			if($page==1)
+			$this->error(L("NO_RESULT"));
+		}
+		
+	}
+	
 	
 	function lock_money(){
 		$user_id = intval($_REQUEST['id']);
